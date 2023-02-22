@@ -7,6 +7,7 @@ import com.example.doormate.domain.RepetitionDay;
 import com.example.doormate.repository.AlarmRepository;
 import com.example.doormate.repository.ReminderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 @RequiredArgsConstructor
 public class RepetitionDate {
 

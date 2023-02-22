@@ -36,13 +36,13 @@ public class ReminderController {
         return new Message("알람 수정 완료");
     }
 
-    @DeleteMapping("/{id}")
-    public Message delete(@PathVariable(name = "id") Long id) {
+    @DeleteMapping()
+    public Message delete(@RequestParam Long id) {
         Message message = reminderService.deleteReminder(id);
         return message;
     }
 
-    @GetMapping("/individual")
+    @GetMapping("/today")
     @ResponseBody
     public List<Reminder> findDay() {
         return alarmService.findTodayAlarm();
